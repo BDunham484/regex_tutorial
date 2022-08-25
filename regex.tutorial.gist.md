@@ -36,7 +36,7 @@ ___
 
 ### Quantifiers: `+ and {x, y}`
 `{x, y}`
-In this case, these quantifiers indicate that we want to find an expression between 2 and 6 in length.
+In this case, these quantifiers indicate that we want to find an expression between 2 and 6 in length. Specifically lowercase characters a-z and a period.
     
 /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]`{2,6}`)$/
 
@@ -65,12 +65,12 @@ ___
 `\.`
 This matches any periods given in an expression:
 
-/^(`[a-z0-9_`\.`-]`+)@(`[\da-z`\.`-]`+)\.(`[a-z`\.`]`{2,6})$/
+/^([a-z0-9_`\.`-]+)@([\da-z`\.`-]+)\.([a-z`\.`]{2,6})$/
 
 `\d`
 This matches single characters that are digits from 0-9:
 
-/^(`[a-z0-9_\.-]`+)@(`[`\d`a-z\.-]`+)\.(`[a-z\.]`{2,6})$/
+/^([a-z0-9_\.-]+)@([`\d`a-z\.-]+)\.([a-z\.]{2,6})$/
 
 ___
 
@@ -89,9 +89,9 @@ ___
 
 Matches a string of the given parameters within the brackets.
 
-`[\da-z\.-]`
-
-Above we see it matching any single digit with a combination of lowercase characters a-z, any jperiods and dashes
+`[a-z0-9_\.-]` - Matches any lowercase letters, numbers 0-9, underscores, periods or dashes<br>
+`[\da-z\.-]` - Matches any single digit, lowercase letters, periods or dashes<br>
+`[a-z\.]` - matches any lowercase letters and periods<br>
 ___
 
 ### Greedy Match: `+`
