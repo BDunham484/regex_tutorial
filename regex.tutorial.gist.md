@@ -1,4 +1,4 @@
-# Rexex Tutorial: Matching an Email
+# Regex Tutorial: Matching an Email
 
 In this tutorial I'll outline how the specific parts of a regular expression apply to matching an email.
 
